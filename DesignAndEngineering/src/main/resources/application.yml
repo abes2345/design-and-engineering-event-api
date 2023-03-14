@@ -1,0 +1,40 @@
+spring:
+  cloud:
+    function:
+      definition: >-
+        acmeManufacturingScProductModelApprovedV1CadProductModelIdConsumer;acmeManufacturingScProductModelModifiedV1CadProductModelIdConsumer;acmeManufacturingScProductEngineeringCompleteV1PlmProductModelIdConsumer;acmeManufacturingScProductModelCompleteV1CadProductModelIdConsumer;acmeManufacturingScProductModelCreatedV1CadProductModelIdConsumer
+    stream:
+      bindings:
+        acmeManufacturingScProductModelApprovedV1CadProductModelIdConsumer-in-0:
+          destination: acmeManufacturing/sc/product/model/approved/v1/cad/*
+        acmeManufacturingScProductModelModifiedV1CadProductModelIdConsumer-in-0:
+          destination: acmeManufacturing/sc/product/model/modified/v1/cad/*
+        acmeManufacturingScProductEngineeringCompleteV1PlmProductModelIdConsumer-in-0:
+          destination: acmeManufacturing/sc/product/engineering/complete/v1/plm/*
+        acmeManufacturingScProductModelCompleteV1CadProductModelIdConsumer-in-0:
+          destination: acmeManufacturing/sc/product/model/complete/v1/cad/*
+        acmeManufacturingScProductModelCreatedV1CadProductModelIdConsumer-in-0:
+          destination: acmeManufacturing/sc/product/model/created/v1/cad/*
+      binders:
+        solace-binder:
+          type: solace
+          environment:
+            solace:
+              java:
+                host: 'localhost:214'
+                msgVpn: default
+                clientUsername: default
+                clientPassword: default
+logging:
+  level:
+    root: info
+    org:
+      springframework: info
+server:
+  port: 8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
