@@ -1,6 +1,9 @@
 # Acme Manufacturing
 
-This project is the manufacturing leg of a supply chain and consists of three elements; An AsyncAPI specification
+This project is the manufacturing leg of a supply chain and consists of three elements; 
+- An AsyncAPI specification
+- A Spring Cloud Stream project
+- A Data Generator
 
 ## Table of Contents
 
@@ -13,11 +16,30 @@ This project is the manufacturing leg of a supply chain and consists of three el
 
 Describe the installation process of this project. For example:
 
+1. Install the Spring Cloud Stream Microservice
+
 ```bash
-git clone https://github.com/your-username/your-project.git
-cd your-project/
-npm install
+git clone https://github.com/abes2345/design-and-engineering-event-api.git
+cd design-and-engineering-event-api/designandengineering
+mvn clean package
+cd target
+java -jar DesignAndEngineering-0.1.0.jar
 ```
 
-```javascript
-const ds = require( 
+2. Install the Data Generator
+
+## Usage
+
+1. Run the Spring Cloud Stream Microservice
+
+```bash
+cd target
+java -jar DesignAndEngineering-0.1.0.jar
+```
+
+2. Run the Data Generator
+
+## Contributing
+
+## License
+
