@@ -46,6 +46,14 @@ java -jar DesignAndEngineering-0.1.0.jar
 
 2. Install the Data Generator
 
+```bash
+cd DataGenerator
+npm install fs
+npm install solclientjs
+npm install @asyncapi/parser
+npm install json-schema-faker
+```
+
 ## Usage
 
 1. Run the Spring Cloud Stream Microservice
@@ -56,3 +64,7 @@ java -jar DesignAndEngineering-0.1.0.jar
 ```
 
 2. Run the Data Generator
+
+```bash
+node index.js ../AsyncAPI/Design_and_Engineering_Event_API-0.1.0.yaml
+```
