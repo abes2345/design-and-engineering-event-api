@@ -31,12 +31,8 @@ graph TD;
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
-
-Describe the installation process of this project. For example:
 
 1. Install the Spring Cloud Stream Microservice
 
@@ -60,8 +56,3 @@ java -jar DesignAndEngineering-0.1.0.jar
 ```
 
 2. Run the Data Generator
-
-## Contributing
-
-## License
-
