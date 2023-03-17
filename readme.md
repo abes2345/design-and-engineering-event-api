@@ -5,6 +5,28 @@ This project is the manufacturing leg of a supply chain and consists of three el
 - A Spring Cloud Stream project
 - A Data Generator
 
+```mermaid
+graph TD;
+  AsyncAPI --> DataGenerator;
+  DataGenerator --> API1;
+  DataGenerator --> API2;
+  DataGenerator --> APIn;
+  API1 --> SampleData;
+  API2 --> SampleData;
+  APIn --> SampleData;
+  SampleData --> DataStream;
+
+  AsyncAPI --> CodeGenerator;
+  CodeGenerator--> API1;
+  CodeGenerator --> API2;
+  CodeGenerator--> APIn;
+  API1 --> SampleData;
+  API2 --> SampleData;
+  APIn --> SampleData;
+
+  DataStream --> Subscribers
+```
+
 ## Table of Contents
 
 - [Installation](#installation)
