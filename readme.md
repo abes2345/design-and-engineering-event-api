@@ -1,5 +1,4 @@
-
-# Acme Manufacturing
+# design-and-engineering-event-api
 
 This project is the manufacturing leg of a supply chain and consists of three elements;
 
